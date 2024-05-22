@@ -9,7 +9,6 @@ public class Gun : Weapon {
 
         GameObject bullet = Instantiate(BulletPerfab, FirePoint.position, FirePoint.rotation);
         Rigidbody2D BulletRB = bullet.GetComponent<Rigidbody2D>();
-        Bullet BulletScrpit = bullet.GetComponent<Bullet>();
 
         BulletRB.AddForce(FirePoint.right * BulletSpeed, ForceMode2D.Impulse);
     }
