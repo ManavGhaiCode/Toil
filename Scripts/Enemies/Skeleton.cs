@@ -81,6 +81,7 @@ public class Skeleton : Enemy {
 
     IEnumerator Attack() {
         Vector2 OriginalPosition = transform.position;
+        Vector2 TargetPosition = Target.position;
 
         bool Hit = false;
 
@@ -90,7 +91,7 @@ public class Skeleton : Enemy {
                 percent += Time.deltaTime * AttackSpeed;
                 float Interpolation = (-Mathf.Pow(percent, 2) + percent) * 4;
 
-                rb.position = Vector2.Lerp(OriginalPosition, Target.position, Interpolation);
+                rb.position = Vector2.Lerp(OriginalPosition, TargetPosition, Interpolation);
 
                 yield return null;
             } else {
