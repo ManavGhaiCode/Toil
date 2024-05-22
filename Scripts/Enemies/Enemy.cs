@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Die() {}
+    public virtual void Die() {}
     public void TakeDamage(int Damage) {
         Health -= Damage;
 
