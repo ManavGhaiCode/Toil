@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1927261681581254323}
   - component: {fileID: 5201554864294664477}
   - component: {fileID: 8048776554700666394}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Skeleton_Witch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
