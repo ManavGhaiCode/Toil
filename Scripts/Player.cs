@@ -8,6 +8,9 @@ public class Player : MonoBehaviour {
     private Rigidbody2D rb;
     private Vector2 MoveInput;
 
+    [SerializeField]
+    private Weapon Gun;
+
     void Start() {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -15,6 +18,10 @@ public class Player : MonoBehaviour {
     void Update() {
         MoveInput.x = Input.GetAxisRaw("Horizontal");
         MoveInput.y = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKey(KeyCode.Mouse0)) {
+            Gun.Attack();
+        }
     }
 
     void FixedUpdate() {
