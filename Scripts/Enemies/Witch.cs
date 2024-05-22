@@ -12,11 +12,13 @@ public class Witch : Enemy {
     private int CurrentWayPoint = 0;
 
     private Vector2 Dir;
-    private Vector2 Target;
+    private new Vector2 Target;
 
     private float TimeToMove;
 
     private float MoveWaypoint = 0.25f;
+
+    public GameObject Skeleton;
 
     public override void Start() {
         base.Start();
@@ -40,11 +42,25 @@ public class Witch : Enemy {
 
         if (CurrentWayPoint >= path.vectorPath.Count) {
             Dir = Vector2.zero;
+            path = null;
+
             StartCoroutine(WaitPath());
         } else {
             Dir = ((Vector2)path.vectorPath[CurrentWayPoint] - rb.position).normalized;
         }
 
+        if (Time.time >= TimeToAttack) {
+            int NumEnemies = Random.Range(1, 3);
+
+            for (int i = 0; i < NumEnemies; i++) {
+                int Posx = (int)Random.Range(-1, 1);
+                int Posy = (int)Random.Range(-1, 1);
+
+                Instantiate(Skeleton, transform.position + new Vector3 (Posx, Posy), Quaternion.identity);
+            }
+
+            TimeToAttack = Time.time + TimeBetweenAttacks;
+        }
     }
 
     private void FixedUpdate() {

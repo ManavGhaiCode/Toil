@@ -83,8 +83,6 @@ public class Skeleton : Enemy {
         Vector2 OriginalPosition = transform.position;
         Vector2 TargetPosition = Target.position;
 
-        bool Hit = false;
-
         float percent = 0f;
         while (percent <= 1) {
             if (Target != null) {
