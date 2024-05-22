@@ -7,8 +7,9 @@ public class Gun : Weapon {
         if (Time.time < TimeToAttack) return;
         TimeToAttack = Time.time + TimeBetweenAttacks;
 
-        GameObject Bullet = Instantiate(BulletPerfab, FirePoint.position, FirePoint.rotation);
-        Rigidbody2D BulletRB = Bullet.GetComponent<Rigidbody2D>();
+        GameObject bullet = Instantiate(BulletPerfab, FirePoint.position, FirePoint.rotation);
+        Rigidbody2D BulletRB = bullet.GetComponent<Rigidbody2D>();
+        Bullet BulletScrpit = bullet.GetComponent<Bullet>();
 
         BulletRB.AddForce(FirePoint.right * BulletSpeed, ForceMode2D.Impulse);
     }

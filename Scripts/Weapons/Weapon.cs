@@ -20,6 +20,11 @@ public class Weapon : MonoBehaviour {
 
     private void Start() {
         TimeToAttack = Time.time;
+
+        Bullet BulletScrpit = BulletPerfab.GetComponent<Bullet>();
+
+        BulletScrpit.Damage = Damage;
+        BulletScrpit.LifeTime = BulletLifeTime;
     }
 
     public virtual void Attack() {}

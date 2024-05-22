@@ -604,10 +604,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 0
   TimeBetweenAttacks: 0.3
-  BulletSpeed: 7.5
+  BulletSpeed: 6
   MaxClip: 9
   clip: 9
-  BulletLifeTime: 0
+  BulletLifeTime: 1
   BulletPerfab: {fileID: 7223489779389743178, guid: e0d49c62be2a7c037a1f743bf52db1d6, type: 3}
   FirePoint: {fileID: 64761801}
 --- !u!1660057539 &9223372036854775807
