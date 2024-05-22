@@ -9,12 +9,16 @@ public class Enemy : MonoBehaviour {
     public float Speed;
     public float AttackSpeed;
 
-    public int MaxHealth;
-    protected int Health;
+    public float TimeBetweenAttacks = 0.2f;
+    public float TimeToAttack;
 
-    private void Start() {
+    [SerializeField] protected int Health;
+
+    public virtual void Start() {
         Target = GameObject.FindWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
+
+        TimeToAttack = Time.time + TimeBetweenAttacks;
     }
 
     public virtual void Die() {}

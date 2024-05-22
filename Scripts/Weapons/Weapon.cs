@@ -31,11 +31,9 @@ public class Weapon : MonoBehaviour {
         PosDir = -PosDir;
 
         transform.position = Player.position + (Vector3)PosDir;
-
-        Debug.Log(mousePos.normalized - (Vector2)Player.position);
     }
 
-    private void Start() {
+    public virtual void Start() {
         TimeToAttack = Time.time;
 
         Bullet BulletScrpit = BulletPerfab.GetComponent<Bullet>();

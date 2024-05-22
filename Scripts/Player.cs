@@ -8,8 +8,8 @@ public class Player : MonoBehaviour {
     private Rigidbody2D rb;
     private Vector2 MoveInput;
 
-    [SerializeField]
-    private Weapon Gun;
+    [SerializeField] private int Health;
+    [SerializeField] private Weapon Gun;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -26,5 +26,17 @@ public class Player : MonoBehaviour {
 
     void FixedUpdate() {
         rb.MovePosition(rb.position + (MoveInput.normalized * Speed * Time.fixedDeltaTime));
+    }
+
+    public void TakeDamage(int Damage) {
+        Health -= Damage;
+
+        if (Health <= 0) {
+            Die();
+        }
+    }
+
+    public void Die() {
+        Destroy(gameObject);
     }
 }

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 50424456}
   - component: {fileID: 50424455}
   - component: {fileID: 50424454}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ Transform:
   m_GameObject: {fileID: 50424453}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.39, y: -2.34, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 5.6499, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAMArIex9/dj4VQIAABEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE2P2jAQ/SvI51IFlorSWxtYtgd20dLVXnIx9oRYOHbkj+VL/PeOnYRkqXrCeu/NzJuPcCFC2QqY02ZpBF9pDuTHgIQ3+TLoyCc40p1WG3GGVvMuuCuCiEbNK3VCIz4KYVaX4IxgP9VOBnGCoFci16Zc8B2k2jqLcE6lBaSMdiFaIXQZkCP+DGch5ISv8TS8zviaJYMrPhkoB6aTtsJWVqu8YpKWFfBguROPvjfqUS1T2EyjCMaZllLYxglxpyp2mtLKeuwDBVxQ7CyWD/oCxK5wwWU/+CXPLbjGkqGnuTA4oDor+aXrqZXU7mtfH1R6uBmvU67+YYejSOdGl09t1VESKrhCsP0rPTFqXW+ofXj+2bZXByr3dCvhvQD1rJdGe8WRdMaHUG9hPO+lunWWFsD2na72egf66v+7CU1cY/PHVIpyG6ivkxrYSB3HHTcPBhfzGx3Hu7BNCkSDizcLf+iuf0AN8SiMdUg1bapgb6u9CVKyiEML3XiXaqMgwo3pChSV7rTGNO5+g3dcr+wd80jDp9IUb7j2C7gLiXCnT5I7aq0Pt23ZQh9WYIsX76RQ0JkOxDPOKdVK1QfWn0kbtvEmp6wXtvOCf74twuhsuh0/zJIJzb9N8/GQT5IkH8GU0e1DMmVjEo9PKOyTynVttBkPbk11yRUeWvsPMlgaWsVj54YeluJc6t7Ihcr1hhkA9VJnuBkHg0Xwo+QLLnBAG3BOqLhvcsmI1GwPPLslymKni6MzNOuyZKQSH9oFJCNp/MvISIBvt7w28CHgEIq3ya7k+hdQSwMEFAAACAgAwCsh7MTQmPBtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFJyoqV5kpGxpYFJYpqpeZqRboqJgUGaYap5cmKSsYF5spFSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAwCsh7H392PhVAgAAEQUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAwCsh7MTQmPBtAAAAeAAAAAkAJAAAAAAAAAAAAAAAogIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABaAwAAAAA=
+    dataString: UEsDBBQAAAgIAMArIex1L4ECWAIAAA8FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzk3HEDqE3lpDSA8EJrSTiy9CWmMNsuTRB18Z/ntXso0dZnJCvPd29+1q5Q8ilK2AOW0WRvCl5kB+Dkg4k2+DjnyBE91ptREXaDXvgrsiiGjUvFEnNOLDEGZ1Cc4I9kvtZBAnCHolcm3KOd9Bqq2zCOdUWkDKaBeiFUIfA3LCn4dpCDnjaTQJpwuepsngikcGyoHppK2wldUqr5ikZQU8WO7Ew6dGPaxlCptpFME401IK2zgh7lzFTlNaWY99oIALip3F8kFfgNgVLrjsB6/y3IJrLBl6ngmDA6qzkt+6nlpJ7b72daDShzpP0VGdcvkFmxtdvrRFh0ko4ArB9m/0zKh1vZn24dln114dqdzTrYT3AtSrXhjtFUfSGR9CvYXRrPt76ystgO07vHbagm1dX319NQ/DwfUaez+lUpTbQH0f18BG6jjtePFg8F7+oOO4FrZJgWiw8c/CX7rr709DPAtjHVJNmyr422pvgpTM49BCO96l2iiIcNNKBYpKd15jGnd/gXdcr+wd80zDS2mKN1z7AO5CItzpk+SOWuvj7bZsoY9LsMXKOykUdKYD8YpzSrVS9X7Zz2SI2niTU9aL2nnBP28WYXQ62Y4ep8mY5j8m+eiBj5MkH8KE0e1jMmEjEndPKGyTynXts5kOXprqkivcs/b7MVgYWsVV54YeF+JS6p4/oXK9YQZAreoM7YQsGCyCT5LPucD5bMA5oeJ1k4+MSM32wLNboix2Oj85Q7MuS0YqcdAuIBlJ4wcjIwG+7fLawEHAMRRvk13J9T9QSwMEFAAACAgAwCsh7MTQmPBtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFJyoqV5kpGxpYFJYpqpeZqRboqJgUGaYap5cmKSsYF5spFSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAwCsh7HUvgQJYAgAADwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAwCsh7MTQmPBtAAAAeAAAAAkAJAAAAAAAAAAAAAAApQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABdAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -564,6 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
+  Health: 10
   Gun: {fileID: 2133867359}
 --- !u!50 &1245263273
 Rigidbody2D:
@@ -577,7 +578,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -647,6 +648,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1656211617}
   - component: {fileID: 1656211616}
+  - component: {fileID: 1656211619}
+  - component: {fileID: 1656211618}
+  - component: {fileID: 1656211621}
+  - component: {fileID: 1656211620}
   m_Layer: 0
   m_Name: Skeleton_Witch
   m_TagString: Untagged
@@ -715,12 +720,132 @@ Transform:
   m_GameObject: {fileID: 1656211615}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.429, y: -0.093, z: 0}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1656211618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656211615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ee0c914a464cc1eba6133d25d2a3cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 3.5
+  AttackSpeed: 2
+  TimeBetweenAttacks: 1
+  TimeToAttack: 0
+  Health: 5
+  MoveWaypoint: 0.2
+  StopDistance: 1.5
+  Damage: 1
+--- !u!114 &1656211619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656211615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: 1
+--- !u!61 &1656211620
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656211615}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.75}
+  m_EdgeRadius: 0
+--- !u!50 &1656211621
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656211615}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1857185966
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3479aaf46a031c21488d129bdb5b9ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 0
+  Damage: 2
   TimeBetweenAttacks: 0.3
   BulletSpeed: 6
   MaxClip: 9
@@ -919,5 +1044,5 @@ SceneRoots:
   - {fileID: 1245263271}
   - {fileID: 1857185968}
   - {fileID: 1656211617}
-  - {fileID: 345029810}
   - {fileID: 50424456}
+  - {fileID: 345029810}

@@ -16,5 +16,7 @@ public class Bullet : MonoBehaviour {
         if (emeny != null) {
             emeny.TakeDamage(Damage);
         }
+
+        Destroy(gameObject);
     }
 }
