@@ -24,6 +24,10 @@ public class Weapon : MonoBehaviour {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 LookDir = mousePos - (Vector2)transform.position;
 
+        if (Vector2.Distance(Player.position, mousePos) < 2f) {
+            LookDir = mousePos - (Vector2)Player.position;
+        }
+
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3 (0, 0, angle));
         transform.position = Player.position + (Vector3)LookDir.normalized;
