@@ -174,8 +174,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 5
   AttackSpeed: 2.5
-  TimeBetweenAttacks: 1
-  Health: 10
+  TimeBetweenAttacks: 0.75
+  Health: 4
   MoveWaypoint: 0.2
   StopDistance: 1.5
   Damage: 1

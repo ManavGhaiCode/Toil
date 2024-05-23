@@ -28,7 +28,6 @@ public class PlayerSkeleton : MonoBehaviour {
     public int Damage = 1;
 
     private void Start() {
-        Target = GameObject.FindWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
 
         TimeToAttack = Time.time + TimeBetweenAttacks;
@@ -111,7 +110,10 @@ public class PlayerSkeleton : MonoBehaviour {
 
     IEnumerator Attack() {
         Enemy enemy = Target.GetComponent<Enemy>();
-        enemy.TakeDamage(Damage);
+
+        if (enemy != null) {
+            enemy.TakeDamage(Damage);
+        }
 
         Vector2 OriginalPosition = transform.position;
         Vector2 TargetPosition = Target.position;

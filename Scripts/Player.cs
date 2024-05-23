@@ -7,6 +7,9 @@ public class Player : MonoBehaviour {
     public float DashCooldown = 10f;
     public float DashInvincibilityTime = 0.25f;
 
+    public float TimeBetweenSpawns = 0.2f;
+    public GameObject SkeletonPrefab;
+
     private Rigidbody2D rb;
     private Vector2 MoveInput;
 
@@ -17,8 +20,11 @@ public class Player : MonoBehaviour {
     private bool isDashing = false;
     private bool canTakeDamage = true;
 
+    private float TimeToSpawn;
+
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
+        TimeToSpawn = Time.time;
     }
 
     private void Update() {
@@ -30,6 +36,17 @@ public class Player : MonoBehaviour {
         }
 
         isDashing = Input.GetKey(KeyCode.LeftShift);
+
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time >= TimeToSpawn) {
+            for (int i = 0; i < 3; i++) {
+                int Posx = (int)Random.Range(-1, 1);
+                int Posy = (int)Random.Range(-1, 1);
+
+                Instantiate(SkeletonPrefab, transform.position + new Vector3 (Posx, Posy), Quaternion.identity);
+            }
+
+            TimeToSpawn = Time.time + TimeBetweenSpawns;
+        }
     }
 
     private void FixedUpdate() {
