@@ -29,7 +29,7 @@ public class Player : MonoBehaviour {
             Gun.Attack();
         }
 
-        isDashing = Input.GetKey(KeyCode.Space);
+        isDashing = Input.GetKey(KeyCode.LeftShift);
     }
 
     private void FixedUpdate() {
