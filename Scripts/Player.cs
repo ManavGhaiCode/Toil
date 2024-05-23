@@ -31,7 +31,7 @@ public class Player : MonoBehaviour {
         MoveInput.x = Input.GetAxisRaw("Horizontal");
         MoveInput.y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKey(KeyCode.Mouse0)) {
+        if (Input.GetKeyDown(KeyCode.Mouse0)) {
             Gun.Attack();
         }
 

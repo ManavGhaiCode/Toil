@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Gun
     originalName: 
-    pivot: {x: 0.4166667, y: -0.44444445}
+    pivot: {x: 0.5, y: -1.2}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 12
-      height: 9
+      width: 16
+      height: 5
     spriteID: 83d01332d02a76a778bfffe85981bb70
     spriteBone: []
     spriteOutline: []
@@ -154,10 +154,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 3
-        y: 4
-        width: 12
-        height: 9
+        x: 0
+        y: 6
+        width: 16
+        height: 5
       spriteId: 83d01332d02a76a778bfffe85981bb70
     linkedCells: []
     parentIndex: -1
