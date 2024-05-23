@@ -132,7 +132,7 @@ MonoBehaviour:
   AttackSpeed: 2
   TimeBetweenAttacks: 1
   TimeToAttack: 0
-  Health: 5
+  Health: 3
   MoveWaypoint: 0.2
   StopDistance: 1.5
   Damage: 1
