@@ -12,6 +12,8 @@ public class Skeleton : Enemy {
     private Vector2 Dir;
     private float TimeToPath;
 
+    private bool Search = true;
+
     public float MoveWaypoint = 0.2f;
     public float StopDistance = 1.5f;
     public int Damage = 1;
@@ -31,7 +33,17 @@ public class Skeleton : Enemy {
     }
 
     private void Update() {
-        if (Target == null) return;
+        if (!Search) return;
+
+        if (Target == null) {
+            Target = GameObject.FindWithTag("Player").transform;
+
+            if (Target == null) {
+                Search = false;
+            }
+
+            return;
+        }
 
         if (Time.time > TimeToPath) {
             seeker.StartPath(rb.position, Target.position, OnPath);
@@ -68,6 +80,12 @@ public class Skeleton : Enemy {
 
         if (player != null) {
             player.TakeDamage(Damage);
+        } else {
+            PlayerSkeleton skeleton = HitInfo.collider.GetComponent<PlayerSkeleton>();
+
+            if (skeleton != null) {
+                Target = skeleton.transform;
+            }
         }
     }
 
@@ -80,6 +98,12 @@ public class Skeleton : Enemy {
     }
 
     IEnumerator Attack() {
+        PlayerSkeleton skeleton = Target.GetComponent<PlayerSkeleton>();
+
+        if (skeleton != null) {
+            skeleton.TakeDamage(Damage);
+        }
+
         Vector2 OriginalPosition = transform.position;
         Vector2 TargetPosition = Target.position;
 
