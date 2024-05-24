@@ -23,6 +23,8 @@ public class PlayerSkeleton : MonoBehaviour {
     private Vector2 Dir;
     private float TimeToPath;
 
+    private bool search = true;
+
     public float MoveWaypoint = 0.2f;
     public float StopDistance = 1.5f;
     public int Damage = 1;
@@ -37,8 +39,15 @@ public class PlayerSkeleton : MonoBehaviour {
     }
 
     private void Update() {
+        if (!search) return;
+
         if (Target == null) {
             SearchTarget();
+
+            if (Target == null) {
+                search = false;
+            }
+            
             return;
         }
 
@@ -84,6 +93,8 @@ public class PlayerSkeleton : MonoBehaviour {
     }
 
     private void SearchTarget() {
+        if (!search) return;
+
         Enemy[] Enemies = GameObject.FindObjectsOfType<Enemy>();
         Transform[] Transforms = new Transform [Enemies.Length];
 
@@ -105,7 +116,9 @@ public class PlayerSkeleton : MonoBehaviour {
             }
         }
 
-        seeker.StartPath(rb.position, Target.position, OnPath);
+        if (Target != null) {
+            seeker.StartPath(rb.position, Target.position, OnPath);
+        }
     }
 
     IEnumerator Attack() {

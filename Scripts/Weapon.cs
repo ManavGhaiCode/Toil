@@ -7,17 +7,21 @@ public class Weapon : MonoBehaviour {
     public float TimeBetweenAttacks;
 
     private float TimeToAttack;
-    private Transform Player;
+    private Transform player;
+    private Player PlayerScript;
     private BoxCollider2D collider;
     private bool isAttacking = false;
  
     private void Start() {
         collider = GetComponent<BoxCollider2D>();
-        Player = GameObject.FindWithTag("Player").transform;
+        player = GameObject.FindWithTag("Player").transform;
+
+        PlayerScript = player.GetComponent<Player>();
     }
 
     private void Update() {
         if (isAttacking) return;
+        if (player == null) return;
 
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 LookDir = mousePos - (Vector2)transform.position;
@@ -25,10 +29,14 @@ public class Weapon : MonoBehaviour {
         float angle = Mathf.Atan2(LookDir.y, LookDir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3 (0, 0, angle));
 
-        Vector2 PosDir = ((Vector2)Player.position - mousePos).normalized;
+        Vector2 PosDir = ((Vector2)player.position - mousePos).normalized;
         PosDir = -PosDir;
 
-        transform.position = Player.position + (Vector3)PosDir;
+        if (PlayerScript.isSmall) {
+            PosDir /= 2;
+        }
+
+        transform.position = player.position + (Vector3)PosDir;
     }
 
     public void Attack() {
@@ -38,6 +46,10 @@ public class Weapon : MonoBehaviour {
         isAttacking = true;
 
         collider.size = new Vector2 (1f, 0.3f);
+
+        if (PlayerScript.isSmall) {
+            collider.size /= 2;
+        }
 
         StartCoroutine(ResetAttacking());
 
