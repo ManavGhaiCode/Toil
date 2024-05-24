@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 2.5
   AttackSpeed: 0
-  TimeBetweenAttacks: 2
+  TimeBetweenAttacks: 2.5
   TimeToAttack: 0
   DropChange: 1
   Drops:

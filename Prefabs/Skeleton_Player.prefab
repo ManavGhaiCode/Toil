@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a70d3253dcbf853aafde9be337970fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
+  Speed: 4
   AttackSpeed: 2.5
   TimeBetweenAttacks: 0.75
   Health: 4
