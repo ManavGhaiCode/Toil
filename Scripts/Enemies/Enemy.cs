@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour {
     public float TimeBetweenAttacks = 0.2f;
     public float TimeToAttack;
 
+    public float DropChange = 0.3f;
+    public GameObject[] Drops;
+
     [SerializeField] protected int Health;
 
     public virtual void Start() {
@@ -21,7 +24,18 @@ public class Enemy : MonoBehaviour {
         TimeToAttack = Time.time + TimeBetweenAttacks;
     }
 
-    public virtual void Die() {}
+    public virtual void Die() {
+        System.Random rand = new System.Random();
+
+        float change = (float)rand.NextDouble();
+
+        if (change <= DropChange) {
+            int i = Random.Range(0, Drops.Length);
+
+            Instantiate(Drops[i], transform.position, Quaternion.identity);
+        }
+    }
+
     public void TakeDamage(int Damage) {
         Health -= Damage;
 

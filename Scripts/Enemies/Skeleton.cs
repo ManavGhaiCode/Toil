@@ -94,6 +94,8 @@ public class Skeleton : Enemy {
     }
 
     public override void Die() {
+        base.Die();
+
         Destroy(gameObject);
     }
 

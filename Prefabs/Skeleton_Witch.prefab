@@ -133,6 +133,9 @@ MonoBehaviour:
   AttackSpeed: 2
   TimeBetweenAttacks: 1
   TimeToAttack: 0
+  DropChange: 0.15
+  Drops:
+  - {fileID: 3681110533714985110, guid: 3f68af13983c8605d9ff5a0f8c1c5d94, type: 3}
   Health: 3
   MoveWaypoint: 0.2
   StopDistance: 1.5

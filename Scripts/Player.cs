@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
     [SerializeField] private int Health;
     [SerializeField] private Weapon Needle;
 
-    private float _Speed = 5f;
+    private float _Speed;
     private bool canDash = true;
     private bool isDashing = false;
     private bool canTakeDamage = true;
@@ -28,6 +28,8 @@ public class Player : MonoBehaviour {
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         TimeToSpawn = Time.time;
+
+        _Speed = Speed;
     }
 
     private void Update() {
@@ -41,7 +43,7 @@ public class Player : MonoBehaviour {
         isDashing = Input.GetKey(KeyCode.LeftShift);
 
         if (Input.GetKeyDown(KeyCode.Space) && Time.time >= TimeToSpawn) {
-            int Effect = Random.Range(-1, 6);
+            int Effect = Random.Range(0, 4);
 
             switch (Effect) {
                 case 0: {
@@ -98,13 +100,13 @@ public class Player : MonoBehaviour {
         canDash = false;
 
         StartCoroutine(ResentCanTakeDamage());
+        StartCoroutine(ResentDashSpeed());
         StartCoroutine(ResentCanDash());
     }
 
     private IEnumerator ResentCanTakeDamage() {
         yield return new WaitForSeconds (DashInvincibilityTime);
         canTakeDamage = true;
-        _Speed /= 2.5f;
     }
 
     private IEnumerator ResentCanDash() {
@@ -112,17 +114,43 @@ public class Player : MonoBehaviour {
         canDash = true;
     }
 
+    private IEnumerator ResentDashSpeed() {
+        yield return new WaitForSeconds (DashInvincibilityTime);
+        _Speed = Speed;
+    }
+
     public void TakeDamage(int Damage) {
         if (!canTakeDamage) return;
 
         Health -= Damage;
+
+        canTakeDamage = false;
+        StartCoroutine(ResentCanTakeDamage());
 
         if (Health <= 0) {
             Die();
         }
     }
 
-    public void Die() {
+    public void TakeHealth(int ExtraHealth) {
+        Health += ExtraHealth;
+
+        if (Health >= 10) {
+            Health = 10;
+        }
+    }
+
+    public void ResetEffects() {
+        transform.localScale = new Vector3 (1f, 1f, 0);
+        Needle.transform.localScale = new Vector3 (1f, 1f, 0);
+
+        _Speed = Speed;
+        isSmall = false;
+
+        Health = 10;
+    }
+
+    private void Die() {
         Destroy(gameObject);
     }
 }
