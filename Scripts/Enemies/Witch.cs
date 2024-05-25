@@ -30,6 +30,9 @@ public class Witch : Enemy {
 
         Target = new Vector3 (Posx, Posy, 0);
         seeker.StartPath(rb.position, Target, OnPath);
+
+        TimeToAttack = Time.time;
+        GameObject.FindWithTag("Main").GetComponent<WaveController>().EnemySpawn();
     }
 
     private void Update() {
@@ -84,6 +87,8 @@ public class Witch : Enemy {
 
     public override void Die() {
         base.Die();
+
+        GameObject.FindWithTag("Main").GetComponent<WaveController>().EnemyDeath();
         Destroy(gameObject);
     }
 }
