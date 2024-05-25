@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     public float Speed = 5f;
     public float DashCooldown = 10f;
-    public float DashInvincibilityTime = 0.25f;
+    public float DashInvincibilityTime = 1f;
 
     public float TimeBetweenSpawns = 0.2f;
     public GameObject SkeletonPrefab;
@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
     private Vector2 MoveInput;
 
     private HealthBar healthBar;
+    private CameraController cam;
 
     [SerializeField] private int Health;
     [SerializeField] private Weapon Needle;
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour {
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         healthBar = GameObject.FindObjectOfType<HealthBar>().GetComponent<HealthBar>();
+        cam = Camera.main.GetComponent<CameraController>();
 
         TimeToSpawn = Time.time;
 
@@ -132,6 +134,8 @@ public class Player : MonoBehaviour {
         StartCoroutine(ResentCanTakeDamage());
 
         healthBar.UpdateBar(Health);
+
+        cam.Shake(2);
 
         if (Health <= 0) {
             Die();

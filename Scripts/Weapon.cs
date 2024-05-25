@@ -12,9 +12,12 @@ public class Weapon : MonoBehaviour {
     private BoxCollider2D collider;
     private bool isAttacking = false;
  
+    private CameraController cam;
+
     private void Start() {
         collider = GetComponent<BoxCollider2D>();
         player = GameObject.FindWithTag("Player").transform;
+        cam = Camera.main.GetComponent<CameraController>();
 
         PlayerScript = player.GetComponent<Player>();
     }
@@ -68,6 +71,7 @@ public class Weapon : MonoBehaviour {
 
         if (enemy != null) {
             enemy.TakeDamage(Damage);
+            cam.Shake(0);
         }
     }
 }

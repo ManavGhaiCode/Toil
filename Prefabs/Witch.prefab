@@ -108,6 +108,8 @@ MonoBehaviour:
   Drops:
   - {fileID: 3681110533714985110, guid: 3f68af13983c8605d9ff5a0f8c1c5d94, type: 3}
   - {fileID: 5220347943639681408, guid: 6d39ebcf0e7050658b1e20ecad72bb6e, type: 3}
+  - {fileID: 5220347943639681408, guid: 6d39ebcf0e7050658b1e20ecad72bb6e, type: 3}
+  - {fileID: 5220347943639681408, guid: 6d39ebcf0e7050658b1e20ecad72bb6e, type: 3}
   Health: 8
   WaitTime: 2
   Skeleton: {fileID: 3892418809784266810, guid: ae3a437c900d65726bee81da3fd466eb, type: 3}
