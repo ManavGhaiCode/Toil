@@ -391,6 +391,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 391755167}
     m_Modifications:
+    - target: {fileID: 200104628760456204, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
+      propertyPath: TimeBetweenAttacks
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5341607037908886625, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12
@@ -453,6 +457,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1492042694}
     m_Modifications:
+    - target: {fileID: 200104628760456204, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
+      propertyPath: TimeBetweenAttacks
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5341607037908886625, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -1298,6 +1306,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1492042694}
     m_Modifications:
+    - target: {fileID: 200104628760456204, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
+      propertyPath: TimeBetweenAttacks
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5341607037908886625, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -1461,7 +1473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: f775a0302297e825ab644741566d584b, type: 2}
-  isGlobal: 0
+  isGlobal: 1
   blendDistance: 0
   weight: 1
   priority: 0
@@ -1676,6 +1688,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 391755167}
     m_Modifications:
+    - target: {fileID: 200104628760456204, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
+      propertyPath: TimeBetweenAttacks
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5341607037908886625, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -1998,6 +2014,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1492042694}
     m_Modifications:
+    - target: {fileID: 200104628760456204, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
+      propertyPath: TimeBetweenAttacks
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5341607037908886625, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -2060,6 +2080,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 391755167}
     m_Modifications:
+    - target: {fileID: 200104628760456204, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
+      propertyPath: TimeBetweenAttacks
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5341607037908886625, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12
@@ -2932,6 +2956,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 391755167}
     m_Modifications:
+    - target: {fileID: 200104628760456204, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
+      propertyPath: TimeBetweenAttacks
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5341607037908886625, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -3777,6 +3805,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1492042694}
     m_Modifications:
+    - target: {fileID: 200104628760456204, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
+      propertyPath: TimeBetweenAttacks
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5341607037908886625, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -3841,6 +3873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2041427770}
   - component: {fileID: 2041427771}
+  - component: {fileID: 2041427772}
   m_Layer: 0
   m_Name: HealthBar
   m_TagString: Untagged
@@ -3915,6 +3948,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2041427772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041427769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8756cce79ded5b289dec13229eb3ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sprites:
+  - {fileID: 1424511875, guid: c66d81f0b9f37bf9d92892ba19b6c756, type: 3}
+  - {fileID: 377940933, guid: c66d81f0b9f37bf9d92892ba19b6c756, type: 3}
+  - {fileID: -165579299, guid: c66d81f0b9f37bf9d92892ba19b6c756, type: 3}
+  - {fileID: -291204024, guid: c66d81f0b9f37bf9d92892ba19b6c756, type: 3}
+  - {fileID: -1287001843, guid: c66d81f0b9f37bf9d92892ba19b6c756, type: 3}
+  - {fileID: 200033979, guid: c66d81f0b9f37bf9d92892ba19b6c756, type: 3}
+  - {fileID: 1509396056, guid: c66d81f0b9f37bf9d92892ba19b6c756, type: 3}
+  - {fileID: 1112512978, guid: c66d81f0b9f37bf9d92892ba19b6c756, type: 3}
+  - {fileID: -1551098819, guid: c66d81f0b9f37bf9d92892ba19b6c756, type: 3}
+  - {fileID: -382704625, guid: c66d81f0b9f37bf9d92892ba19b6c756, type: 3}
+  - {fileID: 668146411, guid: c66d81f0b9f37bf9d92892ba19b6c756, type: 3}
 --- !u!1001 &2094008952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3923,6 +3980,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1492042694}
     m_Modifications:
+    - target: {fileID: 200104628760456204, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
+      propertyPath: TimeBetweenAttacks
+      value: 4.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5341607037908886625, guid: 0bae7ec3c46b936c59621c1d8c8bf483, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3

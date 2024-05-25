@@ -5,7 +5,7 @@ public class PickupHealth : MonoBehaviour {
         Player player = HitInfo.GetComponent<Player>();
 
         if (player != null) {
-            player.TakeHealth(2);
+            player.TakeHealth(1);
             Destroy(gameObject);
         }
     }

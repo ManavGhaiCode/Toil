@@ -13,6 +13,8 @@ public class Player : MonoBehaviour {
     private Rigidbody2D rb;
     private Vector2 MoveInput;
 
+    private HealthBar healthBar;
+
     [SerializeField] private int Health;
     [SerializeField] private Weapon Needle;
 
@@ -27,6 +29,8 @@ public class Player : MonoBehaviour {
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
+        healthBar = GameObject.FindObjectOfType<HealthBar>().GetComponent<HealthBar>();
+
         TimeToSpawn = Time.time;
 
         _Speed = Speed;
@@ -127,6 +131,8 @@ public class Player : MonoBehaviour {
         canTakeDamage = false;
         StartCoroutine(ResentCanTakeDamage());
 
+        healthBar.UpdateBar(Health);
+
         if (Health <= 0) {
             Die();
         }
@@ -138,6 +144,8 @@ public class Player : MonoBehaviour {
         if (Health >= 10) {
             Health = 10;
         }
+
+        healthBar.UpdateBar(Health);
     }
 
     public void ResetEffects() {
@@ -148,6 +156,8 @@ public class Player : MonoBehaviour {
         isSmall = false;
 
         Health = 10;
+
+        healthBar.UpdateBar(Health);
     }
 
     private void Die() {
