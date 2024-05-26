@@ -121,7 +121,7 @@ public class Player : MonoBehaviour {
     }
 
     private IEnumerator ResentDashSpeed() {
-        yield return new WaitForSeconds (DashInvincibilityTime);
+        yield return new WaitForSeconds (0.25f);
         _Speed = Speed;
     }
 

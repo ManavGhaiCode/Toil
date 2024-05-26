@@ -2807,8 +2807,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  DashCooldown: 7.5
-  DashInvincibilityTime: 0.25
+  DashCooldown: 5
+  DashInvincibilityTime: 0.75
   TimeBetweenSpawns: 5
   SkeletonPrefab: {fileID: 749075883524045486, guid: a9e9b474ca692daa7bf330f92829c00a, type: 3}
   Health: 10
