@@ -33,7 +33,7 @@ public class Skeleton : Enemy {
     }
 
     private void Update() {
-        if (!Search) return;
+        if (GameObject.FindWithTag("Player") == null) return;
 
         if (Target == null) {
             Target = GameObject.FindWithTag("Player").transform;

@@ -166,5 +166,8 @@ public class Player : MonoBehaviour {
 
     private void Die() {
         Destroy(gameObject);
+        GameObject.FindWithTag("Main")
+            .GetComponent<SceneLoader>()
+            .LoadScene("End");
     }
 }
